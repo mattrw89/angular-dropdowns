@@ -71,6 +71,7 @@ angular.module('ngDropdowns', [])
                     ng-href='{{dropdownSelectItem.href}}'
                     ng-click='selectItem()'>
                     {{dropdownSelectItem[dropdownItemLabel]}}
+                    <i class='{{dropdownSelectItem.icon}}' data-ng-if='dropdownSelectItem.icon'></i>
                 </a>
             </li>"""
     }

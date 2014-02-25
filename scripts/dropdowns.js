@@ -48,7 +48,7 @@ angular.module('ngDropdowns', []).directive('dropdownSelect', [
           dropdownSelectCtrl.select(scope.dropdownSelectItem);
         };
       },
-      template: "<li ng-class='{divider: dropdownSelectItem.divider}'>\n    <a href='' class='dropdown-item'\n        ng-if='!dropdownSelectItem.divider'\n        ng-href='{{dropdownSelectItem.href}}'\n        ng-click='selectItem()'>\n        {{dropdownSelectItem[dropdownItemLabel]}}\n    </a>\n</li>"
+      template: "<li ng-class='{divider: dropdownSelectItem.divider}'>\n    <a href='' class='dropdown-item'\n        ng-if='!dropdownSelectItem.divider'\n        ng-href='{{dropdownSelectItem.href}}'\n        ng-click='selectItem()'>\n        {{dropdownSelectItem[dropdownItemLabel]}}\n        <i class='{{dropdownSelectItem.icon}}' data-ng-if='dropdownSelectItem.icon'></i>\n    </a>\n</li>"
     };
   }
 ]).directive('dropdownMenu', [
